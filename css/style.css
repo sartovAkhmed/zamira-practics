@@ -1,0 +1,243 @@
+@import url(./core.css);
+
+.page {
+  background-image: url(../img/intestellar-bg.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.header {
+  padding: 0 0 30px 0;
+}
+.header__inner {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header__logo span {
+  color: red;
+}
+.header__nav ul {
+  display: flex;
+  gap: 30px;
+
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.header__nav ul a {
+  transition: 250ms;
+}
+.header__nav ul a:hover {
+  text-decoration: overline;
+}
+.header__nav__search {
+  background-color: #f50000;
+  border-radius: 4px;
+  border: none;
+  opacity: 0.8;
+  padding: 6px 10px;
+}
+.header__nav__search::placeholder {
+  color: white;
+}
+
+.page__wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: end;
+}
+.page__wrapper img {
+  max-width: 350px;
+  height: auto;
+  border-radius: 24px;
+}
+
+.page__block {
+  max-width: 500px;
+  color: white;
+}
+.page__block h2 {
+  font-size: 34px;
+}
+.page__block p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+.page__button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.ticket {
+  background-color: #1d1e23;
+  padding: 40px;
+}
+.ticket__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket__inner h4 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.chosse__date__block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chosse__date__block ul {
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+}
+.chosse__date__block .icon {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ticket__button {
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.cards {
+  background-color: #18191e;
+  padding: 30px 0;
+}
+.cards__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.cards__filter__block {
+  display: flex;
+  gap: 20px;
+}
+.cards__search {
+  background-color: #18191e;
+  padding: 6px 12px;
+  border-bottom: 1px solid white;
+}
+.cards__search::placeholder {
+  color: rgb(125, 125, 125);
+}
+.cards__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.card {
+  text-align: center;
+}
+.card img {
+  max-width: auto;
+  height: 400px;
+  border-radius: 8px;
+  transition: 250ms;
+}
+.card img:hover {
+  transform: scale(1.1);
+}
+.card h4 {
+  margin: 20px;
+}
+.card ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show__more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.line {
+  height: 2px;
+  width: 900px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.footer {
+  padding: 30px 0;
+  background-color: #18191e;
+}
+.footer__inner {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer__logo span {
+  color: red;
+}
+.footer__nav ul {
+  display: flex;
+  gap: 30px;
+
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer__nav ul a {
+  transition: 250ms;
+}
+.footer__nav ul a:hover {
+  text-decoration: overline;
+}
+
+@media (width < 600px) {
+  .header__nav {
+    display: none;
+  }
+  .header__nav__search {
+    width: 100px;
+  }
+  .page__wrapper {
+    justify-content: start;
+  }
+  .page__wrapper img {
+    display: none;
+  }
+  .ticket__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .chosse__date,
+  .chosse__time {
+    margin: 0 auto;
+  }
+  .cards__filter__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer__nav ul {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card a > img {
+    margin: 0 auto;
+  }
+}
